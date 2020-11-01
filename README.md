@@ -26,5 +26,6 @@ const options = {
 Exporto( options ).loaded();
 ```
 
-![Exporto demo](https://github.com/AbmSourav/exporto/blob/dev/doc-resource/Exporto.gif)
+![Exporto demo](https://github.com/AbmSourav/exporto/blob/dev/doc-resource/Exporto-doc.gif)
+
 
