@@ -13,14 +13,15 @@ It'll create a button, and download data in file.
 
 ```js
 const expt = document.querySelector('.export');
-const data = 'Data';
 
 const options = {
 	targetNode: expt,
 	id: 'abm',
 	data: "<h1>Sourav</h1>",
 	fileType: 'text/html',
-	fileExtension: '.html'
+	fileExtension: '.html',
+	className: 'export-btn',
+	buttonText: 'Export'
 } 
 Exporto( options ).loaded();
 ```
