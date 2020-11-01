@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exporto</title>
+</head>
+<body>
+	<div class="export"></div>
+	<div class="exports"></div>
+	
+	<script src="./dist/exporto/exporto.min.js"></script>
+	<script>
+		const expt = document.querySelector('.export');
+		const expts = document.querySelector('.exports');
+		const data = 'Data';
+
+		const options = {
+			targetNode: expt,
+			id: 'abm',
+			data: "<h1>Sourav</h1>",
+			fileType: 'text/html',
+			fileExtension: '.html'
+		} 
+		Exporto( options ).loaded();
+	</script>
+</body>
+</html>
