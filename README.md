@@ -11,6 +11,8 @@ It'll create a button, and download data in file.
 `className` (optional) - Default: `''` <br>
 `buttonText` (optional) - Default: `Button` <br>
 
+### Example
+
 ```js
 const expt = document.querySelector('.export');
 
