@@ -8,20 +8,31 @@ function Exporto( exports = {} ) {
 	 * constructor mathod
 	 */
 	modules.loaded = () => {
-		if (privateModules.errorCheck()) return console.error('targetNode or id is not defined...')
-		// console.log(exports);
+		if (privateModules.errorCheck().length > 0 ) {
+			const error = privateModules.errorCheck();
+			return console.error(error[0]);
+		}
 
 		targetNode.innerHTML = privateModules.createButton();
 		privateModules.buttonEvent();
 	}
 
 	/**
-	 * Check required inputs: targetNode, id.
+	 * Check required inputs: targetNode, id, data.
 	 * 
 	 * return true
 	 */
 	privateModules.errorCheck = () => {
-		if (targetNode == null || id == null) return true;
+		const error = [];
+
+		if ( targetNode == null ) {
+			error.push('targetNode is not defined...');
+		} else if ( id == null ) {
+			error.push('id is not defined...');
+		} else if ( data == null ) {
+			error.push('data is not defined...');
+		}
+		return error;
 	}
 
 	/**
